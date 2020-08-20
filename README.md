@@ -1,2 +1,2 @@
-# this is snake water gun game.
+# this is snake water gun game.(childhood game)
 # computer plays with us .
