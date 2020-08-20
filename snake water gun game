@@ -1,0 +1,65 @@
+i=1
+computer_point=0
+human_point=0
+
+import math
+import random
+list=["snake","water","gun"]
+choice=random.choice(list)
+
+print("welcome to snake water gun game\n")
+print("total number of choices are 10\n")
+
+while(i<=10):
+    print("enter any word\n1.s\n2.w\n3.g\n")
+    num1=input()
+    print("choices left",10-i)
+    if (num1=="s") and (choice=="snake"):
+        print("you entered\n",num1)
+        print("computer entered\n",choice)
+        print("no one won")
+    elif(num1=="s") and (choice=="water"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("you won")
+        human_point=human_point+1
+    elif(num1=="s") and (choice=="gun"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("computer won")
+        computer_point=computer_point+1
+    elif(num1=="w") and (choice=="snake"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("computer won")
+        computer_point = computer_point + 1
+    elif(num1=="w") and(choice=="water"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("no one won")
+    elif(num1=="w") and (choice=="gun"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("you won")
+        human_point = human_point + 1
+    elif(num1=="g") and (choice=="snake"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("you won")
+        human_point = human_point + 1
+    elif(num1=="g") and (choice=="water"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("computer won")
+        computer_point = computer_point + 1
+    elif(num1=="g") and (choice=="gun"):
+        print("you entered\n", num1)
+        print("computer entered\n", choice)
+        print("no one won")
+    i=i+1
+if(i<1):
+    print("game over")
+if(human_point>computer_point):
+    print("you won the game")
+else:
+    print("computer won the game")
